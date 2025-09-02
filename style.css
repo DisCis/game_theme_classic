@@ -1,7 +1,7 @@
 /*
 Theme Name: game-classic
 Author: Dennis Cieslak
-Version:1.0.0.
+Version:1.0.1.
 */
 
 *{
@@ -14,6 +14,7 @@ color
 -----------------------------*/
 body{
   background: rgb(132, 132, 132);
+  padding: 0 8rem; /* Oben und unten 0, links und rechts 2rem */
 }
 
 /*----------------------------
@@ -36,11 +37,66 @@ nav ul{
   list-style-type: none;
   gap: 2rem;
   padding: 10px;
-  margin-right: 250px;
-
 }
 
 nav ul li a {
   text-decoration: none; /* Entfernt die Unterstriche */
   color: inherit; /* Optional: Übernimmt die Textfarbe vom übergeordneten Element */
 }
+
+
+/*----------------------------
+card
+-----------------------------*/
+.card-container {
+  display: flex; /* Aktiviert das Flexbox-Layout */
+  gap: 16px; /* Abstand zwischen den Kacheln */
+  justify-content: center; /* Zentriert die Kacheln horizontal */
+  flex-wrap: wrap; /* Ermöglicht das Umbrechen der Kacheln auf kleineren Bildschirmen */
+}
+
+.card {
+  display: flex;
+  flex: 1 1 calc(50% - 16px); /* Jede Kachel nimmt 50% des Containers minus Abstand ein */
+  max-width: 300px; /* Maximale Breite der Kachel */
+  box-sizing: border-box; /* Padding und Border werden in die Breite einbezogen */
+  flex-direction: column; /* Elemente untereinander anordnen */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 50%;
+  text-align: left;
+  margin: 16px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%; /* Bild passt sich der Breite der Kachel an */
+  max-width: 300px; /* Maximale Breite des Bildes */
+  height: 200px; /* Feste Höhe des Bildes */
+  object-fit: cover; /* Schneidet das Bild zu, um es in die feste Größe einzupassen */
+  border-radius: 8px; /* Optional: Abgerundete Ecken */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 8px 0 16px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.card-button {
+  align-self: flex-end; /* Button am rechten Rand der Kachel ausrichten */
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0073aa;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
