@@ -1,0 +1,46 @@
+/*
+Theme Name: game-classic
+Author: Dennis Cieslak
+Version:1.0.0.
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------------------------
+color
+-----------------------------*/
+body{
+  background: rgb(132, 132, 132);
+}
+
+/*----------------------------
+layout
+-----------------------------*/
+
+h1, h2, h3, h4, h5,p{
+  margin-bottom: 1rem;
+}
+
+p{
+  color: rgb(0, 242, 255);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: 2rem;
+  padding: 10px;
+  margin-right: 250px;
+
+}
+
+nav ul li a {
+  text-decoration: none; /* Entfernt die Unterstriche */
+  color: inherit; /* Optional: Übernimmt die Textfarbe vom übergeordneten Element */
+}
